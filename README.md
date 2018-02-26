@@ -1,6 +1,6 @@
 # CodeJam
 
-This repo includes solutions for Google Code Jam competition practice problems.  
+This repo includes solutions for the practice problems of Google Code Jam competition.  
 
 ### Introduction
 Scripts are organised by the year and the number of the problem.  
@@ -8,9 +8,8 @@ Sample inputs given by <https://sites.google.com/site/codejamtoioforwomen/> can 
 Outputs files can be found in **/outs** which have been validated as correct via the site mentioned above.
 
 ### Problems Solved
-The solutions currently include:
 1. 2018 Women Problem A
 2. 
 
 ### Environment
-java version "1.8.0_73"
+Java "1.8.0_73"
