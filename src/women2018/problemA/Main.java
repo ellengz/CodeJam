@@ -5,8 +5,8 @@ import java.io.*;
 
 public class Main {
 
-    static String readpath = "/Users/ellen/Workspace/ellen/codejam/A-large-practice.in";
-    static String outpath = "/Users/ellen/Workspace/ellen/codejam/A-large-output.txt";
+    static String readpath = "./ins/A-large-practice.in";
+    static String outpath = "./outs/A-large-output.txt";
 
     public static void main(String[] args) throws IOException {
 
