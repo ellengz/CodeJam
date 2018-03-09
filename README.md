@@ -9,7 +9,7 @@ Outputs files can be found in **/outs** which have been validated as correct via
 
 ### Problems Solved
 1. 2018 Women Problem A
-2. 
+2. 2018 Women Problem B (small)
 
 ### Environment
 Java "1.8.0_73"
