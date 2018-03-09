@@ -3,33 +3,35 @@ package women2018.problemB;
 import java.io.*;
 import java.util.Scanner;
 
-public class Main {
+public class Big {
 
-    static String readpath = "./ins/B-small-practice.in";
-    static String outpath = "./outs/B-small-output.txt";
+    static String readpath = "./ins/B-large-practice.in";
+    static String outpath = "./outs/B-large-output.txt";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
+
         // read file
         Scanner in = new Scanner(new FileReader(readpath));
 
         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(outpath)));
 
         // get total number of cases
-        int T = in.nextInt();
-
-        // handle each case
+        long T = in.nextLong();
         for(int i=0; i<T; i++) {
 
             // number of levels
             int n = in.nextInt();
 
             // store # of employees and level
-            int[][] D = new int[n][2];
+            Long[][] D = new Long[n][2];
             for (int j=0; j<n; j++){
-                D[j][0] = in.nextInt();
-                D[j][1] = in.nextInt();
+                D[j][0] = in.nextLong();
+                D[j][1] = in.nextLong();
             }
 
+//            for (int j=0; j<n; j++) {
+//                System.out.println( D[j][0] + "==============" + D[j][1]);
+//            }
             System.out.println("Case #" + (i + 1) + ": " + findCEO(D));
             out.append("Case #" + (i + 1) + ": " +  findCEO(D) + '\n');
 
@@ -37,17 +39,17 @@ public class Main {
 
         in.close();
         out.close();
+
     }
+    public static Long findCEO(Long[][] D){
 
-    public static int findCEO(int[][] D){
-
-        int need = 0;
+        Long need = Long.valueOf(0);
 
         if (D.length > 1){
             for (int i=0; i<D.length - 1; i++){
 
                 // gap in this round
-                int gap = D[i+1][1] * D[i+1][0] - D[i][0];
+                Long gap = D[i+1][1] * D[i+1][0] - D[i][0];
 
                 // check if there's need in last round
                 // if so
@@ -64,7 +66,7 @@ public class Main {
         }
 
         // search from 1 level higher
-        int l = D[D.length - 1][1] + 1;
+        Long l = D[D.length - 1][1] + 1;
         while (l < 1000){
             if (l < D[D.length - 1][0] - need){
                 l++;
@@ -73,10 +75,7 @@ public class Main {
             }
         }
 
-        return l;
+        return l > 1000 ? 1000 : l;
     }
-
+    
 }
-
-
-
