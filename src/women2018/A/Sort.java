@@ -1,4 +1,4 @@
-package women2018.problemA;
+package women2018.A;
 
 public class Sort {
 
