@@ -1,4 +1,4 @@
-package women2018.problemB;
+package women2018.B;
 
 import java.io.*;
 import java.util.Scanner;
