@@ -5,7 +5,7 @@ Case #4: 14
 Case #5: 15
 Case #6: 1000
 Case #7: 1000
-Case #8: 1000
+Case #8: 1001
 Case #9: 18
 Case #10: 21
 Case #11: 997
@@ -19,7 +19,7 @@ Case #18: 14
 Case #19: 1000
 Case #20: 952
 Case #21: 968
-Case #22: 1000
+Case #22: 1001
 Case #23: 994
 Case #24: 1000
 Case #25: 1000
@@ -55,7 +55,7 @@ Case #54: 988
 Case #55: 1000
 Case #56: 14
 Case #57: 1000
-Case #58: 1000
+Case #58: 1001
 Case #59: 1000
 Case #60: 15
 Case #61: 1000
@@ -77,14 +77,14 @@ Case #76: 37
 Case #77: 14
 Case #78: 8
 Case #79: 7
-Case #80: 1000
+Case #80: 1001
 Case #81: 15
 Case #82: 14
 Case #83: 15
 Case #84: 1000
 Case #85: 14
 Case #86: 1000
-Case #87: 1000
+Case #87: 1001
 Case #88: 23
 Case #89: 1000
 Case #90: 1000

@@ -1,4 +1,4 @@
-package women2018.problemB;
+package women2018.B;
 
 import java.io.*;
 import java.util.Scanner;
@@ -32,8 +32,9 @@ public class Big {
 //            for (int j=0; j<n; j++) {
 //                System.out.println( D[j][0] + "==============" + D[j][1]);
 //            }
-            System.out.println("Case #" + (i + 1) + ": " + findCEO(D));
-            out.append("Case #" + (i + 1) + ": " +  findCEO(D) + '\n');
+            Long level = findCEO(D);
+            System.out.println("Case #" + (i + 1) + ": " + level);
+            out.append("Case #" + (i + 1) + ": " +  level + '\n');
 
         }
 
@@ -65,17 +66,15 @@ public class Big {
             }
         }
 
+        System.out.println("~~~~~~~~~~~~~" + need);
+
         // search from 1 level higher
         Long l = D[D.length - 1][1] + 1;
-        while (l < 1000){
-            if (l < D[D.length - 1][0] - need){
-                l++;
-            }else{
-                break;
-            }
+        while (l < 1000 && l < D[D.length - 1][0] - need){
+            l++;
         }
 
-        return l > 1000 ? 1000 : l;
+        return l;
     }
     
 }

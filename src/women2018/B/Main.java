@@ -30,8 +30,9 @@ public class Main {
                 D[j][1] = in.nextInt();
             }
 
-            System.out.println("Case #" + (i + 1) + ": " + findCEO(D));
-            out.append("Case #" + (i + 1) + ": " +  findCEO(D) + '\n');
+            int level = findCEO(D);
+            System.out.println("Case #" + (i + 1) + ": " + level);
+            out.append("Case #" + (i + 1) + ": " +  level + '\n');
 
         }
 
@@ -63,14 +64,12 @@ public class Main {
             }
         }
 
+        System.out.println("~~~~~~~~~~~~~" + need);
+
         // search from 1 level higher
         int l = D[D.length - 1][1] + 1;
-        while (l < 1000){
-            if (l < D[D.length - 1][0] - need){
-                l++;
-            }else{
-                break;
-            }
+        while (l < 1000 && l < D[D.length - 1][0] - need){
+            l++;
         }
 
         return l;
