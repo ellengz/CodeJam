@@ -66,15 +66,10 @@ public class Big {
             }
         }
 
+        need -= D[D.length - 1][0];
         System.out.println("~~~~~~~~~~~~~" + need);
 
-        // search from 1 level higher
-        Long l = D[D.length - 1][1] + 1;
-        while (l < 1000 && l < D[D.length - 1][0] - need){
-            l++;
-        }
-
-        return l;
+        return (D[D.length - 1][1] + 1) >= (- need) ? (D[D.length - 1][1] + 1): (- need);
     }
     
 }
