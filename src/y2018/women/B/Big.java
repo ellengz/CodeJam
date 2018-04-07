@@ -1,36 +1,38 @@
-package women2018.B;
+package y2018.women.B;
 
 import java.io.*;
 import java.util.Scanner;
 
-public class Main {
+public class Big {
 
-    static String readpath = "./ins/B-small-practice.in";
-    static String outpath = "./outs/B-small-output.txt";
+    static String readpath = "./ins/B-large-practice.in";
+    static String outpath = "./outs/B-large-output.txt";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException{
+
         // read file
         Scanner in = new Scanner(new FileReader(readpath));
 
         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(outpath)));
 
         // get total number of cases
-        int T = in.nextInt();
-
-        // handle each case
+        long T = in.nextLong();
         for(int i=0; i<T; i++) {
 
             // number of levels
             int n = in.nextInt();
 
             // store # of employees and level
-            int[][] D = new int[n][2];
+            Long[][] D = new Long[n][2];
             for (int j=0; j<n; j++){
-                D[j][0] = in.nextInt();
-                D[j][1] = in.nextInt();
+                D[j][0] = in.nextLong();
+                D[j][1] = in.nextLong();
             }
 
-            int level = findCEO(D);
+//            for (int j=0; j<n; j++) {
+//                System.out.println( D[j][0] + "==============" + D[j][1]);
+//            }
+            Long level = findCEO(D);
             System.out.println("Case #" + (i + 1) + ": " + level);
             out.append("Case #" + (i + 1) + ": " +  level + '\n');
 
@@ -38,17 +40,17 @@ public class Main {
 
         in.close();
         out.close();
+
     }
+    public static Long findCEO(Long[][] D){
 
-    public static int findCEO(int[][] D){
-
-        int need = 0;
+        Long need = Long.valueOf(0);
 
         if (D.length > 1){
             for (int i=0; i<D.length - 1; i++){
 
                 // gap in this round
-                int gap = D[i+1][1] * D[i+1][0] - D[i][0];
+                Long gap = D[i+1][1] * D[i+1][0] - D[i][0];
 
                 // check if there's need in last round
                 // if so
@@ -69,8 +71,5 @@ public class Main {
 
         return (D[D.length - 1][1] + 1) >= (- need) ? (D[D.length - 1][1] + 1): (- need);
     }
-
+    
 }
-
-
-
