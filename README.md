@@ -4,9 +4,8 @@ This repo includes solutions for the practice problems of Google Code Jam compet
 
 ### Introduction
 Scripts are organised by the year and the number of the problem.  
-Sample inputs given by <https://sites.google.com/site/codejamtoioforwomen/> can be found in **/ins**.  
-Outputs files can be found in **/outs** which have been validated as correct via the site mentioned above.  
-Solutions for 2018 use standard input.
+Solutions for 2018 Qualification Round use standard input.  
+Solutions for 2018 women use sample inputs given by <https://sites.google.com/site/codejamtoioforwomen/> can be found in **/ins**. Generated outputs files can be found in **/outs** which have been validated as correct via the site mentioned above.  
 
 ### Problems Solved
 1. 2018 Women
