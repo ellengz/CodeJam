@@ -1,6 +1,6 @@
 # CodeJam
 
-This repo includes solutions for the practice problems of Google Code Jam competition.  
+Java solutions for Google Code Jam competition.  
 
 ### Introduction
 Scripts are organised by the year and the number of the problem.  
