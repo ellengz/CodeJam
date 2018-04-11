@@ -19,12 +19,24 @@ public class Solution {
             if(N%2!=0){
                 odd[N/2] = in.nextInt();
             }
-            sort(odd);
-            sort(even);
+
+            quickSort(odd);
+            quickSort(even);
+//            sort(odd);
+//            sort(even);
+
             int position = checkOrder(odd, even);
             System.out.println("Case #" + i + ": " + (position == -1? "OK" : position));
         }
         in.close();
+    }
+
+    /**
+     * quick sort using java.util.Arrays.sort()
+     * @param arr
+     */
+    static void quickSort(int[] arr){
+        Arrays.sort(arr);
     }
 
     /**
