@@ -15,6 +15,9 @@ Solutions for 2018 women use sample inputs given by <https://sites.google.com/si
     1. A
     2. B
     3. C (Small Dataset) 
-
+3. 2018 Round 1C
+    1. A  
+    2. B (statistics needed)  
+    
 ### Environment
 Java "1.8.0_73"
